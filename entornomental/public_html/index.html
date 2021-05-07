@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon.ico' %}" type="image/x-icon">
+    <!--Favicon-->
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="background-color:#0887E5;">
+        <div class="container"><a class="navbar-brand" href="index.html" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/about">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/contacto">CONTACTO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/directory">DIRECTORIO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/register">REGISTRO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/login">INICIAR SESIÓN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <header class="masthead" style="background: url(&quot;assets/img/inicio.jpg&quot;) top;">
+        <div class="container">
+            <div class="intro-text">
+                <div class="intro-lead-in"><span style="color: rgb(7,218,48);">Entorno</span></div>
+                <div class="intro-heading text-uppercase"><span style="color: rgb(8,135,229);">Mental</span></div><a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button" href="#services" style="background:  #0887E5 ;">DESCUBRE MÁS</a></div>
+        </div>
+    </header>
+    <section id="services" style="height:550px;padding: 100px;">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-heart fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading" style="margin-top: 40PX; font-size: 45PX;">Artículos</a></h4>
+                    <p class="text-muted" style="margin-top: 40PX; font-size: 25PX;">Encuentra los mejores artículos sobre salud mental escritos por nuestros profesionales.</p>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading" style="margin-top: 40PX; font-size: 45PX;">Foro</h4>
+                    <p class="text-muted" style="margin-top: 40PX; font-size: 25PX;">¿Tienes alguna duda sobre salud mental? <br>Ingresa a nuestro foro y profesionales capacitados te brindarán ayuda.</p>
+                </div>
+                <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-question fa-stack-1x fa-inverse"></i></span>
+                    <h4 class="section-heading" style="margin-top: 40PX; font-size: 45PX;">Profesionales</h4>
+                    <p class="text-muted" style="margin-top: 40PX; font-size: 25PX;">Contamos con profesionales capacitados para brindarte la ayuda que necesitas y resolver tus dudas. <br></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="portfolio" class="bg-light" >
+        <div class="masthead" style="background-image: url(&quot;assets/img/foro.jpeg&quot;); height: 600px; background-position: center;">
+            <div class="container">
+                <div class="intro-text" style="padding-top: 100px;">
+                    <div class="intro-lead-in"><span style="color: rgb(7,218,48); font-size: 20px;">¿Tienes alguna duda<br> sobre salud mental?</span></div><br>
+                    <div class="intro-heading text-uppercase"><span style="color: rgb(8,135,229); font-size: 23px;">Nuestros especialistas <br>están listos para resolverla</span></div><br>
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" role="button" href="#" style="background:  #0887E5 ;">IR AL FORO</a></div>
+            </div>
+        </div>
+    </section>
+    <footer style="background-color:#0887E5;">
+        <div class="container" id="contact" >
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Entorno Mental&nbsp; 2021</span></div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item"><a href="" target="blank">Aviso de Privacidad</a></li>
+                        <li class="list-inline-item"><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <!--END MODAL: Recaudaciones--->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/agency.js' %}"></script>
+</body>
+
+</html>
