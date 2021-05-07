@@ -1,1 +1,1 @@
-web: gunicorn (entorno-mental).wsgi
+web: gunicorn web.wsgi --log-file -
