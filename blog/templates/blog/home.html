@@ -1,6 +1,6 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
-{% load static %}
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -33,7 +33,7 @@
             </div>
         </div>
     </nav>
-    <header class="masthead" style="background: url(&quot;assets/img/inicio.jpg&quot;) top;">
+    <header class="masthead" style="background: url({% static 'img/inicio.jpg' %}) top;">
         <div class="container">
             <div class="intro-text">
                 <div class="intro-lead-in"><span style="color: rgb(7,218,48);">Entorno</span></div>
@@ -44,7 +44,7 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-heart fa-stack-1x fa-inverse"></i></span>
-                    <h4 class="section-heading" style="margin-top: 40PX; font-size: 45PX;">Artículos</a></h4>
+                    <h4 class="section-heading" style="margin-top: 40PX; font-size: 45PX;">Artículos</h4>
                     <p class="text-muted" style="margin-top: 40PX; font-size: 25PX;">Encuentra los mejores artículos sobre salud mental escritos por nuestros profesionales.</p>
                 </div>
                 <div class="col-md-4"><span class="fa-stack fa-4x"><i class="fa fa-circle fa-stack-2x text-primary"></i><i class="fa fa-thumbs-up fa-stack-1x fa-inverse"></i></span>
@@ -59,7 +59,7 @@
         </div>
     </section>
     <section id="portfolio" class="bg-light" >
-        <div class="masthead" style="background-image: url(&quot;assets/img/foro.jpeg&quot;); height: 600px; background-position: center;">
+        <div class="masthead" style="background-image: url({% static 'assets/img/foro.jpeg' %}); height: 600px; background-position: center;">
             <div class="container">
                 <div class="intro-text" style="padding-top: 100px;">
                     <div class="intro-lead-in"><span style="color: rgb(7,218,48); font-size: 20px;">¿Tienes alguna duda<br> sobre salud mental?</span></div><br>
