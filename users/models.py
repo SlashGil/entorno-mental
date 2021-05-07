@@ -6,7 +6,9 @@ from PIL import Image
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     image = models.ImageField(default='default.jpg', upload_to='profile_pics')
-
+    is_specialist = models.BooleanField(default=False,verbose_name="¿Es un especialista medico?")
+    specialist_id = models.CharField(verbose_name="Cedula profesional", max_length=25,default='')
+    specialist = models.CharField(verbose_name="Especialidad en",max_length=120,default='')
     def __str__(self):
         return f'{self.user.username} Profile'
 
