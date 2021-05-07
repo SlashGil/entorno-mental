@@ -15,6 +15,10 @@ from django.views.generic import (
 )
 
 
+def index(request):
+    return render(request, 'blog/home.html')
+
+
 class PostListView(ListView):
     model = Post
     template_name = 'blog/index.html'
