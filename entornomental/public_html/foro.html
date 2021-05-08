@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 
@@ -11,11 +12,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
-    <link rel="stylesheet" href="../../web/static/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static '../../web/static/fonts/font-awesome.min.css' %}">
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="../../web/static/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../../web/static/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static '../../web/static/favicon/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static '../../web/static/favicon/favicon.ico' %}" type="image/x-icon">
     <!--Favicon-->
 </head>
 
@@ -40,9 +41,9 @@
                         </div>
                       </li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="foro.html">FORO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="directorio.html">DIRECTORIO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="perfil.html">PERFIL</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="index.html">SALIR</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'directory' %}">DIRECTORIO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'perfil'%}">PERFIL</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'index' %}">SALIR</a></li>
                 </ul>
             </div>
         </div>
@@ -52,7 +53,7 @@
 <p style="color: rgb(8,135,229); font-size: 50px; ">FORO</p>
 
 <div class="container">
-    <a href="nuevo_pregunta.html">
+    <a href="{% url 'nueva_pregunta' %}">
         <button type="button" class="btn btn-outline-info" style="font-size: 25px; border-radius: 40px;">Hacer nueva pregunta</button>
     </a>
     <br><br><br><br>

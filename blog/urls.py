@@ -11,6 +11,7 @@ from .views import (
     index,
     contact,
     directory,
+    nueva_pregunta,
 
 )
 
