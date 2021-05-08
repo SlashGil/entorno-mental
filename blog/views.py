@@ -26,6 +26,9 @@ def contact(request):
 def directory(request):
     return render(request, 'blog/directory.html')
 
+def nueva_pregunta(request):
+    return render(request, 'public_html/nueva_pregunta.html')
+
 
 class PostListView(ListView):
     model = Post
