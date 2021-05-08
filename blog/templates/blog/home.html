@@ -20,15 +20,15 @@
 
 <body id="page-top">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="background-color:#0887E5;">
-        <div class="container"><a class="navbar-brand" href="index.html" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+        <div class="container"><a class="navbar-brand" href="{% url 'index' %}" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
                 type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto text-uppercase">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/about">NOSOTROS</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/contacto">CONTACTO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/directory">DIRECTORIO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/register">REGISTRO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/login">INICIAR SESIÓN</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contact' %}">CONTACTO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'directory' %}">DIRECTORIO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{%  url 'register' %}">REGISTRO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">INICIAR SESIÓN</a></li>
                 </ul>
             </div>
         </div>
