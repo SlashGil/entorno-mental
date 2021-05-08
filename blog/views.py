@@ -18,6 +18,8 @@ from django.views.generic import (
 def index(request):
     return render(request, 'blog/home.html')
 
+def contact(request):
+    return render(request,'blog/contacto.html')
 
 class PostListView(ListView):
     model = Post
