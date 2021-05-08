@@ -43,7 +43,7 @@
     </head>
     <body >
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="background-color:#0887E5;">
-          <div class="container"><a class="navbar-brand" href="{% url 'home' %}" style="color: #FFFFFF;"><img src="../../web/static/img/logo.png" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+          <div class="container"><a class="navbar-brand" href="{% url 'home' %}" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
                                                                                                                                                                                                   type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="nav navbar-nav ml-auto text-uppercase">
@@ -111,10 +111,9 @@
 </footer>
 
 <!--END MODAL: Recaudaciones--->
-<script src="assets/js/jquery.min.js"></script>
-<script src="../../web/static/bootstrap/js/bootstrap.min.js"></script>
+<script src="{% static 'js/jquery.min.js' %}"></script>
+<script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-<script src="assets/js/agency.js"></script>
-
+<script src="{% static 'js/agency.js' %}"></script>
     </body>
 </html>
