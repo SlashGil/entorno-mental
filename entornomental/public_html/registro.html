@@ -1,3 +1,5 @@
+{% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -6,7 +8,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1, shrink-to-fit=no">
         <!--<link rel="stylesheet" type="text/css" href="css/imagen.css">-->
-        <link rel="stylesheet" type="text/css" href="css/estilo_index.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/estilo_index.css' %}">
         
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
@@ -26,30 +28,30 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="../../web/static/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
-    <link rel="stylesheet" href="../../web/static/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/css/login.css">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
 
     <!--Favicon-->
-    <link rel="shortcut icon" href="../../web/static/favicon/favicon.ico" type="image/x-icon">
-    <link rel="icon" href="../../web/static/favicon/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
        
     </head>
     <body >
         <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="background-color:#0887E5;">
-          <div class="container"><a class="navbar-brand" href="index.html" style="color: #FFFFFF;"><img src="../../web/static/img/logo.png" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+          <div class="container"><a class="navbar-brand" href="{% url 'home' %}" style="color: #FFFFFF;"><img src="../../web/static/img/logo.png" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
                                                                                                                                                                                                   type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="nav navbar-nav ml-auto text-uppercase">
-                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="nosotros.html">NOSOTROS</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="contacto.html">CONTACTO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="directorioout.html">DIRECTORIO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="registro.html">REGISTRO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="login.html">INICIAR SESIÓN</a></li>
+                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contact' %}">CONTACTO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'directory' %}">DIRECTORIO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'register' %}">REGISTRO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">INICIAR SESIÓN</a></li>
                   </ul>
               </div>
           </div>
@@ -61,36 +63,18 @@
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-5">
-            <img src="../../web/static/img/registro.jpg" alt="registro" class="login-card-img">
+            <img src="{% url 'img/registro.jpg' %}" alt="registro" class="login-card-img">
           </div>
           <div class="col-md-7">
             <div class="card-body">
              
               <p class="login-card-description" style="font-size: 30px;">Registra tu cuenta</p>
-              <form action="#!">
-                <div class="form-group">
-                  <label for="nombre">Nombre</label>
-                  <input type="text" class="form-control" id="nombre" aria-describedby=Nombre" placeholder="Nombre completo">
-                  
-                </div>
-                <div class="form-group">
-                  <label for="correo">Correo</label>
-                  <input type="email" class="form-control" id="correo" aria-describedby="correo" placeholder="ejemplo@gmail.com">
-                </div>
-                <div class="form-group">
-                  <label for="password">Contraseña</label>
-                  <input type="password" class="form-control" id="password" placeholder="********">
-                  <small id="leyenda" class="form-text text-muted">La contraseña debe de contener al menos 1 número </small>
-                </div>
-                <div class="form-group">
-                  <label for="password">Confirmar Contraseña</label>
-                  <input type="password" class="form-control" id="password" placeholder="********">
-                </div>
-                <a href="articulos.html">
-                    <input name="login" id="login" class="btn btn-block login-btn mb-4" type="button" value="Registrarme">
-                  </a>
+              <form method="POST">
+                  {% csrf_token %}
+                  {{ form|crispy }}
+                  <input name="login" id="login" class="btn btn-block login-btn mb-4" type="submit" value="Registrarme">
                 </form>
-                <p class="login-card-footer-text">¿Ya tienes una cuenta? <a href="login.html" class="text-reset">Inicia sesion aquí</a></p>
+                <p class="login-card-footer-text">¿Ya tienes una cuenta? <a href="{% url 'login' %}" class="text-reset">Inicia sesion aquí</a></p>
                 <nav class="login-card-footer-nav">
                   <a href="#!">Términos de uso.</a>
                   <a href="#!">Política de privacidad</a>
