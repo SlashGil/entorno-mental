@@ -131,7 +131,13 @@ USE_TZ = True
 STATIC_ROOT = os.path.join(BASE_DIR, 'static-cdn')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'web/static')
+    os.path.join(BASE_DIR, 'web/static'),
+    'web/static/bootstrap',
+    'web/static/css',
+    'web/static/fonts',
+    'web/static/img',
+    'web/static/js',
+    'web/static/favicon',
 ]
 
 
