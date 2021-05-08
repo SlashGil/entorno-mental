@@ -1,0 +1,179 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Directorio</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/articulos.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <!--Favicon-->
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="background-color:#0887E5;">
+        <div class="container"><a class="navbar-brand" href="{% url 'post' %}" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                                                                                                                                                                                                    type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contact' %}">CONTACTO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'directory' %}">DIRECTORIO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'register' %}">REGISTRO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">INICIAR SESIÓN</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+<section style="text-align: center;"> 
+<p style="color: rgb(8,135,229); font-size: 50px; ">DIRECTORIO</p>
+
+<div class="container">
+    <div class="card-columns" style="padding-top: 20px;">
+        <div class="card" style="width:350px">
+            <img class="card-img-top" src="{% static 'img/dr/angel.jpg' %}" alt="Card image" style="width:100%; height: 400px">
+            <div class="card-body">
+                <h4 class="card-title" style="padding-bottom: 10px; font-size: 20px;">Angel Manzano Díaz</h4>
+                <h5 class="card-title" style="color: #0887E5;">Psicólogo</h6>
+                <p>
+                    <div>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </p>
+              <a href="mailto:angelmanzano@gmail.com" class="btn btn-success btn-block" style="font-size: 20px;">Contactar</a>
+            </div>
+          </div>
+          <div class="card" style="width:350px">
+            <img class="card-img-top" src="{% static 'img/dr/laura.jpg' %}" alt="Card image" style="width:100%; height: 400px">
+            <div class="card-body">
+                <h4 class="card-title" style="padding-bottom: 10px; font-size: 20px;">Laura Viera Cruz </h4>
+                <h5 class="card-title" style="color: #0887E5;">Psicólogo</h6>
+                <p>
+                    <div>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </p>
+              <a href="mailto:lauraViera@gmail.com" class="btn btn-success btn-block" style="font-size: 20px;">Contactar</a>
+            </div>
+          </div>
+          <div class="card" style="width:350px">
+            <img class="card-img-top" src="{% static 'img/dr/jesus.png' %}" alt="Card image" style="width:100%; height: 400px">
+            <div class="card-body">
+                <h4 class="card-title" style="padding-bottom: 10px; font-size: 20px;">Jesus Manuel Jimenez</h4>
+                <h5 class="card-title" style="color: #0887E5;">Psiquiatra</h6>
+                <p>
+                    <div>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </p>
+              <a href="mailto:jesusJimenez@gmail.com" class="btn btn-success btn-block" style="font-size: 20px;">Contactar</a>
+            </div>
+          </div>
+          <div class="card" style="width:350px">
+            <img class="card-img-top" src="{% static 'img/dr/maria.jpg' %}" alt="Card image" style="width:100%; height: 400px">
+            <div class="card-body">
+                <h4 class="card-title" style="padding-bottom: 10px; font-size: 20px;">Maria Gloria Barrio</h4>
+                <h5 class="card-title" style="color: #0887E5;">Psicólogo</h6>
+                <p>
+                    <div>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </p>
+              <a href="mailto:gloriaBarrio@gmail.com" class="btn btn-success btn-block" style="font-size: 20px;">Contactar</a>
+            </div>
+          </div>
+          <div class="card" style="width:350px">
+            <img class="card-img-top" src="{% static 'img/dr/Natalia.jpg' %}" alt="Card image" style="width:100%; height: 400px">
+            <div class="card-body">
+                <h4 class="card-title" style="padding-bottom: 10px; font-size: 20px;">Natalia Salinas Morales</h4>
+                <h5 class="card-title" style="color: #0887E5;">Psiquiatra</h6>
+                <p>
+                    <div>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </p>
+              <a href="mailto:nataliaSalinas@gmail.com" class="btn btn-success btn-block" style="font-size: 20px;">Contactar</a>
+            </div>
+          </div>
+          <div class="card" style="width:350px">
+            <img class="card-img-top" src="{% static 'img/dr/mariano.jpg' %}" alt="Card image" style="width:100%; height: 400px">
+            <div class="card-body">
+                <h4 class="card-title" style="padding-bottom: 10px; font-size: 20px;">Mariano Peralta Gómez</h4>
+                <h5 class="card-title" style="color: #0887E5;">Psiquiatra</h6>
+                <p>
+                    <div>
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                </p>
+              <a href="mailto:marianoPeralta@gmail.com" class="btn btn-success btn-block" style="font-size: 20px;">Contactar</a>
+            </div>
+          </div>
+        
+   
+    </div>
+</section>
+
+    <footer style="background-color:#0887E5;">
+        <div class="container" id="contact" >
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Entorno Mental&nbsp; 2021</span></div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item"><a href="" target="blank">Aviso de Privacidad</a></li>
+                        <li class="list-inline-item"><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+ 
+    <!--END MODAL: Recaudaciones--->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/agency.js' %}"></script>
+</body>
+
+</html>

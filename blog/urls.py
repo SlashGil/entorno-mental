@@ -10,12 +10,15 @@ from .views import (
     add_comment,
     index,
     contact,
+    directory,
+
 )
 
 
 urlpatterns = [
     path('', index, name='home'),
     path('contact/', contact, name='contact'),
+    path('directory/' ,directory ,name='directory'),
     path('posts/', PostListView.as_view(), name='post'),
     path('user/<str:username>/', UserPostListView.as_view(), name='user_posts'),
     path('post/<int:pk>/', PostDetailView.as_view(), name='post_detail'),
