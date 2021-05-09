@@ -27,8 +27,19 @@
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">NOSOTROS</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contact' %}">CONTACTO</a></li>
                     <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'directory' %}">DIRECTORIO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{%  url 'register' %}">REGISTRO</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">INICIAR SESIÓN</a></li>
+                    <li clas="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'index' %}">ARTICULOS</a> </li>
+                    {% if user.is_authenticated  and  user.is_specialist  %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'post_create' %}">Crear entrada de blog</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'profile' %}">Mi Perfil</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'profile' %}">Mi Perfil</a></li>
+                    {% endif %}
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'register' %}">REGISTRO</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">INICIAR SESIÓN</a></li>
+                    {% endif %}
                 </ul>
             </div>
         </div>

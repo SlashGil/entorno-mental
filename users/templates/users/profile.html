@@ -1,7 +1,52 @@
-{% extends "blog/base.html" %}
+{% load static %}
 {% load crispy_forms_tags %}
-{% block content %}
-<div class="content-section">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700">
+    <link rel="stylesheet" href="{% static 'fonts/font-awesome.min.css' %}">
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'favicon/favicon.ico' %}" type="image/x-icon">
+    <!--Favicon-->
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="background-color:#0887E5;">
+        <div class="container"><a class="navbar-brand" href="{% url 'home' %}" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+                type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="nav navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'about' %}">NOSOTROS</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'contact' %}">CONTACTO</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'directory' %}">DIRECTORIO</a></li>
+                    <li clas="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'index' %}">ARTICULOS</a> </li>
+                    {% if user.is_authenticated  and  user.is_specialist  %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'post_create' %}">Crear entrada de blog</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'profile' %}">Mi Perfil</a></li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'profile' %}">Mi Perfil</a></li>
+                    {% endif %}
+                    {% else %}
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'register' %}">REGISTRO</a></li>
+                        <li class="nav-item"><a class="nav-link js-scroll-trigger" href="{% url 'login' %}">INICIAR SESIÓN</a></li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="content-section">
     <div class="media">
         <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
         <div class="media-body">
@@ -24,4 +69,32 @@
         </div>
     </form>
 </div>
-{% endblock content %}
+    </div>
+    <footer style="background-color:#0887E5;">
+        <div class="container" id="contact" >
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Entorno Mental&nbsp; 2021</span></div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item"><a href="" target="blank">Aviso de Privacidad</a></li>
+                        <li class="list-inline-item"><a href="">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--END MODAL: Recaudaciones--->
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <script src="{% static 'js/agency.js' %}"></script>
+</body>
+</html>
