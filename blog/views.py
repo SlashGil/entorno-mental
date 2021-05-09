@@ -33,7 +33,7 @@ def foro(request):
     return render(request, 'blog/foro.html')
 
 def nosotros(request):
-    return render(request, 'blog/nosotros.html')
+    return render(request, 'blog/nosotros.html', {'title': 'About'})
 
 
 class PostListView(ListView):
