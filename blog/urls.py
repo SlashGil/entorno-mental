@@ -12,7 +12,6 @@ from .views import (
     contact,
     directory,
     nueva_pregunta,
-    foro,
 
 )
 
