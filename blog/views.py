@@ -29,6 +29,9 @@ def directory(request):
 def nueva_pregunta(request):
     return render(request, 'blog/nuevo_pregunta.html')
 
+def foro(request):
+    return render(request, 'blog/foro.html')
+
 
 class PostListView(ListView):
     model = Post
