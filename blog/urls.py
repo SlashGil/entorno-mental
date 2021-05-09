@@ -13,6 +13,7 @@ from .views import (
     directory,
     nueva_pregunta,
     foro,
+    nosotros,
 
 )
 
@@ -31,5 +32,6 @@ urlpatterns = [
     path('post/<int:pk>/comment/', add_comment, name='add_comment'),
     path('nueva_pregunta', nueva_pregunta, name='nueva_pregunta'),
     path('foro/', foro, name='foro'),
+    path('nosotros/', views.nosotros, name='nosotros'),
 
 ]
