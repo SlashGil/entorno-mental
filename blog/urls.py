@@ -30,6 +30,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('post/<int:pk>/comment/', add_comment, name='add_comment'),
     path('nueva_pregunta', nueva_pregunta, name='nueva_pregunta'),
-    path('foro', foro, name='foro'),
+    path('foro/', foro, name='foro'),
 
 ]
