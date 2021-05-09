@@ -22,7 +22,7 @@
 
 <body id="page-top">
     <nav class="navbar navbar-dark navbar-expand-lg fixed-top" id="mainNav" style="{% if user.is_authenticated and user.is_specialist %}background-color:#0eb80e;{% else %}background-color:#0887E5;{% endif %}">
-        <div class="container"><a class="navbar-brand" href="{% url 'post' %}" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
+        <div class="container"><a class="navbar-brand" href="{% url 'home' %}" style="color: #FFFFFF;"><img src="{% static 'img/logo.png' %}" width="80" height="inherit">Entorno Mental</a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler navbar-toggler-right"
                                                                                                                                                                                                     type="button" data-toogle="collapse" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="nav navbar-nav ml-auto text-uppercase">
