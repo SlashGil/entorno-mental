@@ -32,6 +32,9 @@ def nueva_pregunta(request):
 def foro(request):
     return render(request, 'blog/foro.html')
 
+def nosotros(request):
+    return render(request, 'blog/nosotros.html')
+
 
 class PostListView(ListView):
     model = Post
@@ -103,7 +106,7 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 
 
 def about(request):
-    return render(request, 'blog/nosotros.html', {'title': 'About'})
+    return render(request, 'blog/about.html', {'title': 'About'})
 
 
 @login_required
